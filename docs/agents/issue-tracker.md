@@ -1,6 +1,6 @@
 # Issue tracker: Local Markdown
 
-This repo has no git remote, so specs and tickets live as local Markdown files. Creating a remote, or editing agent instruction files, is the user's decision — not part of publishing.
+Specs and tickets for this project were written as local Markdown files while the repo had no remote; they were published this way rather than as hosted issues. The project is now public at `hirun-2542/barber-booking`, but the tracker stays local so the spec and ticket history remain readable in one clone.
 
 ## Conventions
 
