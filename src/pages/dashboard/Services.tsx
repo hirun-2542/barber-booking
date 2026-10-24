@@ -1,0 +1,23 @@
+import { useState } from 'react'
+import { Plus,Scissors,Info } from 'lucide-react'
+import { PageHead } from '../../components/PageHead'
+import { Button } from '../../components/ui/Button'
+import { Field,Input,Select } from '../../components/ui/Form'
+import { Dialog } from '../../components/ui/Overlay'
+import { EmptyState } from '../../components/ui/Misc'
+import { useAppStore } from '../../store/AppStore'
+import { useI18n } from '../../i18n/I18nProvider'
+import type { Service } from '../../domain/types'
+import { useFeedback } from '../../components/Feedback'
+const blank:Service={id:'',name:{en:'',th:''},durationMin:45,priceThb:350,active:true}
+export default function Services(){
+ const {state,setServiceActive}=useAppStore();const {t,serviceName,fmtDuration,fmtPrice}=useI18n();const notify=useFeedback();const [editing,setEditing]=useState<Service|null>(null)
+ function toggle(s:Service){try{setServiceActive(s.id,!s.active);notify('common.saved')}catch{notify('e.storageError',true)}}
+ return <><PageHead title={t('nav.services')} description={t('e.servicesIntro')} action={<Button variant="primary" onClick={()=>setEditing({...blank,name:{...blank.name}})}><Plus size={16}/>{t('m.addService')}</Button>}/><p className="list-note">{t('e.activeServices',{count:state.services.filter(s=>s.active).length})}</p><div className="manage-columns"><div className="panel">{state.services.length?state.services.map((s,i)=><div key={s.id} className={`service-row od-row${s.active?'':' inactive'}`}><span className="service-number od-fixed">{(i+1).toString().padStart(2,'0')}</span><div className="od-field od-fill"><h3>{serviceName(s)}</h3><span className="booking-meta">{fmtDuration(s.durationMin)} · <span className="od-nowrap">{fmtPrice(s.priceThb)}</span></span>{!s.active&&<span className="field-hint">{t('m.hiddenNote')}</span>}</div><div className="service-controls od-cluster"><button type="button" className="switch" role="switch" aria-checked={s.active} aria-label={`${t('m.active')}: ${serviceName(s)}`} onClick={()=>toggle(s)}><span className="switch-mark" aria-hidden/>{t(s.active?'m.active':'m.hidden')}</button><Button size="sm" onClick={()=>setEditing({...s,name:{...s.name}})}>{t('common.edit')}</Button></div></div>):<EmptyState icon={<Scissors size={24}/>} title={t('m.noServices')}/>}</div><aside><div className="info-note"><Info size={18}/><p>{t('m.editNote')}</p></div></aside></div>{editing&&<ServiceDialog service={editing} onClose={()=>setEditing(null)}/>}</>
+}
+function ServiceDialog({service,onClose}:{service:Service;onClose():void}){
+ const {saveService}=useAppStore();const {t}=useI18n();const notify=useFeedback();const [value,setValue]=useState(service);const [errors,setErrors]=useState<{en?:string;duration?:string;price?:string}>({})
+ function validate(){return {en:value.name.en.trim()?undefined:t('m.errorNameEn'),duration:value.durationMin>=15&&value.durationMin<=180?undefined:t('e.durationError'),price:Number.isFinite(value.priceThb)&&value.priceThb>=0&&value.priceThb<=100000?undefined:t('m.errorPrice')}}
+ function save(){const e=validate();setErrors(e);if(Object.values(e).some(Boolean))return;try{saveService(value);notify('common.saved');onClose()}catch{notify('e.storageError',true)}}
+ return <Dialog title={t(service.id?'m.editService':'m.newService')} onClose={onClose} footer={<><Button onClick={onClose}>{t('common.cancel')}</Button><Button variant="primary" onClick={save}>{t('common.save')}</Button></>}><div className="od-stack section-gap"><Field label={`${t('m.nameEn')} *`} error={errors.en}>{p=><Input {...p} value={value.name.en} maxLength={60} onChange={e=>setValue(v=>({...v,name:{...v.name,en:e.target.value}}))} onBlur={()=>setErrors(e=>({...e,en:validate().en}))}/>}</Field><Field label={t('m.nameTh')} optional>{p=><Input {...p} value={value.name.th} maxLength={60} onChange={e=>setValue(v=>({...v,name:{...v.name,th:e.target.value}}))}/>}</Field><div className="form-grid"><Field label={t('m.duration')} error={errors.duration}>{p=><Select {...p} value={value.durationMin} onChange={e=>setValue(v=>({...v,durationMin:Number(e.target.value)}))}>{[15,30,45,60,75,90,120,150,180].map(n=><option value={n} key={n}>{n} {t('e.minutes')}</option>)}</Select>}</Field><Field label={`${t('common.price')} (฿)`} error={errors.price}>{p=><Input {...p} type="number" min={0} max={100000} value={Number.isNaN(value.priceThb)?'':value.priceThb} onChange={e=>setValue(v=>({...v,priceThb:e.target.value===''?NaN:Number(e.target.value)}))} onBlur={()=>setErrors(e=>({...e,price:validate().price}))}/>}</Field></div><div className="info-note"><Info size={18}/><p>{t('m.editNote')}</p></div></div></Dialog>
+}

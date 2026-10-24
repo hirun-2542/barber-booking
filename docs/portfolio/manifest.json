@@ -1,0 +1,18 @@
+{
+  "slides": [
+    {"file": "slides/01.png", "title": "ปก", "video_seconds": 5},
+    {"file": "slides/02.png", "title": "ก่อนมีระบบ (ภาพแชตเป็นภาพจำลอง)", "video_seconds": 8, "illustrative": true},
+    {"file": "slides/03.png", "title": "ฝั่งลูกค้า", "video_seconds": 7},
+    {"file": "demo-flow.mp4", "title": "คลิปใช้งานจริง", "video_seconds": 36.29},
+    {"file": "slides/04.png", "title": "ฝั่งเจ้าของร้าน", "video_seconds": 7},
+    {"file": "slides/05.png", "title": "ก่อน → หลัง รายปัญหา", "video_seconds": 10},
+    {"file": "slides/06.png", "title": "ช่วยได้มากแค่ไหน (ตัวเลขจากเดโม)", "video_seconds": 9},
+    {"file": "slides/07.png", "title": "มือถือ เดสก์ท็อป สองภาษา", "video_seconds": 7},
+    {"file": "slides/08.png", "title": "ปรับให้เข้ากับร้าน และขอบเขต", "video_seconds": 7}
+  ],
+  "outputs": {"pdf": "deck.pdf", "video": "promo.mp4", "demo_clip": "demo-flow.mp4"},
+  "video": {"codec": "h264", "size": "1920x1080", "fps": 24, "duration_seconds": 96.29, "audio": false, "transition": "fade in/out 0.5s per segment"},
+  "measured_in_demo": {"customer_taps_to_book": 6, "owner_taps_to_accept": 1, "slots_before_booking": ["14:00", "14:30", "19:00"], "slots_after_booking": ["19:00"], "tests_passing": 19},
+  "clock_fixed_to": "2026-10-12T11:10 local",
+  "not_measured": ["business outcomes of a real shop", "audio", "other players", "print output"]
+}

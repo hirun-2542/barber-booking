@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Demo stage</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+body{width:1920px;height:1080px;overflow:hidden;background:#fff;position:relative}
+#cap{position:absolute;left:112px;top:56px;right:112px}
+#cap .eyebrow{font-size:20px}
+#cap h2{font-size:48px;margin-top:10px;min-height:64px}
+.frame{position:absolute;border:1px solid var(--line);overflow:hidden;background:#fff}
+.frame iframe{border:0;display:block}
+#who1,#who2{position:absolute;top:196px;font-family:"IBM Plex Mono",monospace;font-size:18px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.foot{bottom:28px}
+</style>
+</head>
+<body>
+<div id="cap"><div class="eyebrow" id="eb">Live demo · เดโมจริง ข้อมูลตัวอย่าง</div><h2 id="t"></h2></div>
+<div id="who1" style="left:112px">ลูกค้า · มือถือ</div>
+<div id="who2" style="left:652px">เจ้าของร้าน · เดสก์ท็อป</div>
+<div class="frame" id="f1" style="left:112px;top:236px;width:392px;height:800px;border-radius:34px"><iframe name="phone" src="http://127.0.0.1:4192/#/" width="390" height="800"></iframe></div>
+<div class="frame" id="f2" style="left:652px;top:236px;width:1156px;height:800px;border-radius:14px"><iframe name="desk" src="http://127.0.0.1:4192/#/dashboard/today" width="1156" height="800"></iframe></div>
+<script>
+function cap(text, eb){ document.getElementById('t').textContent = text; if (eb) document.getElementById('eb').textContent = eb; }
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Ash &amp; Oak Barber — Booking · Portfolio slides</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+#s3 .phone{max-height:540px}
+#s7 .phone{max-height:590px}
+#s5 .t{font-size:31px;grid-template-columns:440px 560px 1fr}
+#s5 .t>div{padding:28px 28px 28px 0}
+#s5 .t .h{font-size:20px;padding-bottom:12px}
+#s6 .stat{min-height:410px}
+#s6 .stat .v{font-size:96px;white-space:nowrap}
+#s6 .stat .v small{font-size:34px}
+#s6 .stat .l{font-size:31px}
+#s6 .stat .s{font-size:23px}
+#s8 .callout{padding:34px 0}
+#s8 .callout b{font-size:38px}
+#s8 .callout span{font-size:29px}
+#s6 b[style]{font-size:34px!important}
+#s6 p[style]{font-size:28px!important}
+#s8 b[style]{font-size:36px!important}
+#s8 p[style]{font-size:29px!important}
+.chat{width:640px;border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--surface);display:flex;flex-direction:column;gap:14px}
+.b{max-width:430px;padding:14px 20px;border-radius:18px;font-size:26px;line-height:1.45;background:#fff;border:1px solid var(--line)}
+.b.me{align-self:flex-end;background:#EDEDED;border-color:#EDEDED}
+.pain{display:flex;gap:26px;padding:26px 0;border-top:1px solid var(--line)}
+.pain:first-child{border-top:0;padding-top:0}
+.num{font-family:"IBM Plex Mono",monospace;font-size:34px;color:var(--muted);width:48px;flex:none}
+.pain b{display:block;font-size:34px;line-height:1.35}
+.pain span{display:block;font-size:26px;line-height:1.5;color:var(--muted);margin-top:6px}
+.t{display:grid;grid-template-columns:420px 520px 1fr;gap:0;font-size:25px;line-height:1.5}
+.t>div{padding:22px 24px 22px 0;border-top:1px solid var(--line)}
+.t .h{font-family:"IBM Plex Mono",monospace;font-size:19px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:0;padding-bottom:10px}
+.t .before{color:var(--muted)}
+.t b{font-weight:600}
+.stat{border:1px solid var(--line);border-radius:14px;padding:30px 30px 26px;display:flex;flex-direction:column;justify-content:space-between;min-height:290px}
+.stat .v{font-size:92px;line-height:1;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat .v small{font-size:40px;font-weight:600;letter-spacing:0;margin-left:6px}
+.stat .l{font-size:27px;line-height:1.45;font-weight:600;margin-top:18px}
+.stat .s{font-size:21px;line-height:1.5;color:var(--muted);margin-top:8px}
+.callout{padding:22px 0;border-top:1px solid var(--line)}
+.callout:first-child{border-top:0}
+.callout b{display:block;font-size:30px;line-height:1.4}
+.callout span{display:block;font-size:24px;line-height:1.55;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="slide" id="s1">
+  <div class="row" style="flex:1;align-items:center;gap:80px">
+    <div style="flex:1">
+      <div class="eyebrow">Portfolio · Booking app</div>
+      <h1 style="margin-top:28px">ระบบจองคิวสำหรับ<br>ร้านเจ้าของคนเดียว</h1>
+      <p class="lead">ร้านตัดผม คลินิก ร้านนวด ลูกค้าจองเวลาว่างได้เอง เจ้าของร้านเห็นทั้งวันและอนุมัติคิวได้จากที่เดียว</p>
+      <div style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap">
+        <span class="tag on">เดโมใช้งานได้จริง</span><span class="tag">มือถือ + เดสก์ท็อป</span><span class="tag">ไทย / English</span>
+      </div>
+      <p class="note" style="margin-top:34px">ชื่อร้าน บริการ และข้อมูลทั้งหมดในภาพเป็นตัวอย่างสมมติ</p>
+    </div>
+    <div style="position:relative;width:820px;height:800px;flex:none">
+      <div class="desk" style="position:absolute;right:0;top:40px;width:700px"><img src="shots/o-today.png"></div>
+      <div class="phone" style="position:absolute;left:0;top:130px;width:300px;border-color:#cfcfcf"><img src="shots/c-date.png"></div>
+    </div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>1 / 8</span></div>
+</section>
+
+<!-- 2 BEFORE -->
+<section class="slide" id="s2">
+  <div class="eyebrow">Before · ก่อนมีระบบ</div>
+  <h2>คิวกระจายอยู่ในแชต กระดาษ และความจำ</h2>
+  <p class="lead" style="margin-top:12px;font-size:28px">สถานการณ์ที่พบได้ในร้านเจ้าของคนเดียวที่รับจองผ่านแชตหรือโทรศัพท์</p>
+  <div class="row" style="gap:96px;margin-top:44px;align-items:flex-start">
+    <div>
+      <div class="chat">
+        <div class="b">พรุ่งนี้ว่างไหมคะ</div>
+        <div class="b me">ช่วงบ่ายว่างครับ</div>
+        <div class="b">บ่ายสามได้ไหมคะ ตัดผม+หนวด</div>
+        <div class="b me">ขอเช็กคิวก่อนนะครับ</div>
+        <div class="b me">บ่ายสามชนครับ สี่โมงได้ไหม</div>
+        <div class="b">…ขอดูตารางก่อนค่ะ</div>
+      </div>
+      <p class="note" style="margin-top:16px">ภาพจำลองสถานการณ์ ไม่ใช่ข้อมูลของร้านใดร้านหนึ่ง</p>
+    </div>
+    <div style="flex:1">
+      <div class="pain"><div class="num">01</div><div><b>ต้องตอบแชตระหว่างให้บริการ</b><span>ถามวัน-เวลาไปกลับหลายรอบกว่าจะตกลงกันได้</span></div></div>
+      <div class="pain"><div class="num">02</div><div><b>เสี่ยงซ้อนคิวและลืมคิว</b><span>คิวอยู่หลายที่ ต้องจำหรือเปิดดูเองทุกครั้ง</span></div></div>
+      <div class="pain"><div class="num">03</div><div><b>ลูกค้าไม่เห็นว่าร้านว่างเมื่อไร</b><span>ต้องถามซ้ำ และมักถามนอกเวลาที่เจ้าของว่างตอบ</span></div></div>
+      <div class="pain"><div class="num">04</div><div><b>ยกเลิก/เลื่อนไม่เป็นระบบ</b><span>เวลาที่ว่างขึ้นมาไม่ถูกเสนอให้ลูกค้าคนถัดไป</span></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>2 / 8</span></div>
+</section>
+
+<!-- 3 AFTER customer -->
+<section class="slide" id="s3">
+  <div class="eyebrow">After · ฝั่งลูกค้า</div>
+  <h2>ลูกค้าจองเองได้ เห็นเวลาว่างจริงก่อนตัดสินใจ</h2>
+  <p class="lead" style="margin-top:12px;font-size:28px">จองครบใน 6–7 แตะ + กรอกชื่อและเบอร์ (วัดจากเดโม: 6 แตะเมื่อจองวันนี้ 7 แตะเมื่อเลือกวันอื่น)</p>
+  <div class="row" style="gap:38px;margin-top:34px;justify-content:space-between">
+    <div style="width:290px"><div class="phone"><img src="shots/c-service.png"></div><div class="cap"><b>1 เลือกบริการ</b>ชื่อ เวลา ราคา</div></div>
+    <div style="width:290px"><div class="phone"><img src="shots/c-date.png"></div><div class="cap"><b>2 เลือกวันและเวลา</b>เห็นเวลาว่างของแต่ละวัน</div></div>
+    <div style="width:290px"><div class="phone"><img src="shots/c-details.png"></div><div class="cap"><b>3 กรอกชื่อและเบอร์</b>ตรวจรูปแบบให้ทันที</div></div>
+    <div style="width:290px"><div class="phone"><img src="shots/c-review.png"></div><div class="cap"><b>4 ตรวจสอบ</b>สรุปก่อนส่งคำขอ</div></div>
+    <div style="width:290px"><div class="phone"><img src="shots/c-done.png"></div><div class="cap"><b>5 ได้ Reference code</b>ใช้ตรวจ/ยกเลิกภายหลัง</div></div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>3 / 8</span></div>
+</section>
+
+<!-- 4 AFTER owner -->
+<section class="slide" id="s4">
+  <div class="eyebrow">After · ฝั่งเจ้าของร้าน</div>
+  <h2>เห็นทั้งวันในหน้าเดียว อนุมัติคิวได้ในแถวเดียวกัน</h2>
+  <div class="row" style="gap:64px;margin-top:34px;align-items:flex-start">
+    <div class="desk" style="width:1060px"><img src="shots/o-today.png"></div>
+    <div style="flex:1">
+      <div class="callout"><b>Needs action รวมงานค้างไว้ที่เดียว</b><span>คำขอที่รออนุมัติ และคิวที่ถึงเวลาแล้วรอปิดสถานะ</span></div>
+      <div class="callout"><b>Accept / Decline ในแถวของคิวเลย</b><span>รับคำขอด้วย 1 แตะ ปฏิเสธต้องยืนยันก่อน กันกดผิด</span></div>
+      <div class="callout"><b>ตัวเลข 4 ตัวสำหรับวันนี้</b><span>คิววันนี้ · คำขอรอยืนยัน · รายได้ที่คาดไว้ · คิวถัดไป</span></div>
+      <div class="callout"><b>ลูกค้าจอง เจ้าของเห็นทันที</b><span>เปิดสองแท็บ ฝั่งลูกค้ากับฝั่งเจ้าของ เห็นการเปลี่ยนแปลงข้ามกันโดยไม่ต้องรีเฟรช</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>4 / 8</span></div>
+</section>
+
+<!-- 5 BEFORE → AFTER table -->
+<section class="slide" id="s5">
+  <div class="eyebrow">Before → After</div>
+  <h2>ปัญหาแต่ละข้อ ระบบช่วยตรงไหน</h2>
+  <div class="t" style="margin-top:34px">
+    <div class="h">ก่อน</div><div class="h">ส่วนของระบบที่ช่วย</div><div class="h">สิ่งที่เห็นได้ในเดโม</div>
+    <div class="before"><b>ตอบแชตหลายรอบ</b><br>กว่าจะตกลงวันเวลา</div>
+    <div><b>หน้าจองของลูกค้า</b><br>เลือกบริการ วัน และเวลาเอง</div>
+    <div>จองครบใน 6–7 แตะ โดยไม่ต้องรอร้านตอบ (ร้านยังกดอนุมัติ)</div>
+    <div class="before"><b>ซ้อนคิว</b><br>คิวอยู่หลายที่</div>
+    <div><b>ตัวคำนวณเวลาว่าง</b><br>กันเวลาที่ถูกจองไว้ พักเที่ยง เวลาปิด และระยะห่างระหว่างคิว</div>
+    <div>เวลาที่ถูกจอง (รอยืนยัน/ยืนยันแล้ว) หายจากตัวเลือกของคนอื่น · ชุดทดสอบอัตโนมัติ 19 ข้อผ่านทั้งหมด</div>
+    <div class="before"><b>ลืมคิว คิวค้าง</b></div>
+    <div><b>Today + Needs action</b><br>รวมคำขอรออนุมัติและคิวที่ถึงเวลาแล้ว</div>
+    <div>เจ้าของเปิดหน้าเดียวเห็นงานที่ต้องทำและคิวของวัน</div>
+    <div class="before"><b>ยกเลิก/เลื่อนไม่เป็นระบบ</b></div>
+    <div><b>ยกเลิกเองด้วย Reference code + เบอร์</b><br>และเจ้าของเลื่อนคิวผ่านหน้าต่างเดียว</div>
+    <div>ยกเลิกแล้วเวลานั้นกลับมาให้ลูกค้าคนถัดไปจองได้ทันที (ทดสอบแล้ว)</div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>5 / 8</span></div>
+</section>
+
+<!-- 6 HOW MUCH -->
+<section class="slide" id="s6">
+  <div class="eyebrow">How much · ช่วยได้มากแค่ไหน</div>
+  <h2>ตัวเลขที่วัดได้จากเดโม</h2>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:38px">
+    <div class="stat"><div class="v">6–7<small>แตะ</small></div><div><div class="l">ลูกค้าจองครบ</div><div class="s">นับจากการจองจริงในเดโม ไม่รวมการพิมพ์ชื่อและเบอร์</div></div></div>
+    <div class="stat"><div class="v">1<small>แตะ</small></div><div><div class="l">เจ้าของรับคำขอ</div><div class="s">ปุ่ม Accept อยู่ในแถวของ Needs action</div></div></div>
+    <div class="stat"><div class="v">19<small>ข้อ</small></div><div><div class="l">ชุดทดสอบกฎการจอง</div><div class="s">เวลาว่าง สถานะ และ seed รันผ่านทั้งหมด</div></div></div>
+    <div class="stat"><div class="v">6</div><div><div class="l">สถานะคิว</div><div class="s">รอยืนยัน · ยืนยัน · ปฏิเสธ · ยกเลิก · เสร็จ · ไม่มา</div></div></div>
+    <div class="stat"><div class="v">2<small>ภาษา</small></div><div><div class="l">ไทย / English</div><div class="s">สลับได้ทุกหน้า วันที่และราคาแสดงตามภาษา</div></div></div>
+  </div>
+  <div style="margin-top:34px;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:28px 34px">
+    <b style="font-size:28px">ตัวเลขนี้คือสิ่งที่ระบบทำได้ ไม่ใช่ผลลัพธ์ทางธุรกิจของร้านจริง</b>
+    <p style="font-size:25px;line-height:1.6;color:var(--muted);margin-top:8px">ผลต่อร้านจริงวัดได้หลังใช้งานจริงเท่านั้น แนะนำให้เทียบ “ก่อน–หลัง” ด้วย 3 ตัวชี้วัด: จำนวนข้อความแชตต่อ 1 การจอง · จำนวนคิวที่ซ้อนกัน · สัดส่วนคิวที่ลูกค้าไม่มา</p>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>6 / 8</span></div>
+</section>
+
+<!-- 7 MOBILE + TH -->
+<section class="slide" id="s7">
+  <div class="eyebrow">Works everywhere · ใช้ได้ทุกหน้าจอ</div>
+  <h2>มือถือ เดสก์ท็อป และสองภาษา</h2>
+  <div class="row" style="gap:48px;margin-top:30px;align-items:flex-start">
+    <div style="width:272px"><div class="phone"><img src="shots/c-date-th.png"></div><div class="cap"><b>ลูกค้า · ภาษาไทย</b>วัน เดือน ข้อความเป็นไทย</div></div>
+    <div style="width:272px"><div class="phone"><img src="shots/o-calendar-m.png"></div><div class="cap"><b>เจ้าของ · บนมือถือ</b>ดูคิวทีละวัน ไม่ต้องเลื่อนข้าง</div></div>
+    <div style="flex:1"><div class="desk"><img src="shots/o-calendar.png"></div><div class="cap"><b>เจ้าของ · ปฏิทินรายสัปดาห์บนเดสก์ท็อป</b>คิวรอยืนยัน (เส้นประ) และยืนยันแล้ว แยกด้วยรูปทรงและข้อความ ไม่พึ่งสีอย่างเดียว</div></div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>7 / 8</span></div>
+</section>
+
+<!-- 8 CLOSING -->
+<section class="slide" id="s8">
+  <div class="eyebrow">Make it yours · ปรับให้เข้ากับร้าน</div>
+  <h2>ปรับให้เข้ากับร้านของคุณได้</h2>
+  <div class="row" style="gap:96px;margin-top:46px">
+    <div style="flex:1">
+      <div class="callout"><b>บริการและราคา</b><span>ชื่อสองภาษา ระยะเวลา ราคา เปิด/ซ่อนได้โดยไม่กระทบคิวเดิม</span></div>
+      <div class="callout"><b>เวลาเปิด-ปิดและวันหยุด</b><span>รายวัน พร้อมเวลาพักและวันหยุดเฉพาะวัน</span></div>
+      <div class="callout"><b>กติกาการจอง</b><span>ระยะห่างของเวลา ช่วงพักระหว่างคิว จองล่วงหน้าได้กี่วัน แจ้งล่วงหน้าขั้นต่ำกี่ชั่วโมง</span></div>
+    </div>
+    <div style="flex:1;border:1px solid var(--line);border-radius:14px;padding:34px 38px;background:var(--surface);align-self:flex-start">
+      <b style="font-size:30px">ขอบเขตของเดโมนี้</b>
+      <p style="font-size:26px;line-height:1.7;color:var(--muted);margin-top:10px">ข้อมูลเก็บในเบราว์เซอร์ของผู้ใช้ ยังไม่มีระบบเข้าสู่ระบบ ฐานข้อมูลกลาง การแจ้งเตือนทาง SMS/LINE หรือการชำระเงิน ส่วนเหล่านี้เป็นขั้นต่อไปเมื่อนำไปใช้กับร้านจริง</p>
+    </div>
+  </div>
+  <div class="foot"><span>Ash &amp; Oak Barber · Portfolio demo</span><span>8 / 8</span></div>
+</section>
+
+</body>
+</html>

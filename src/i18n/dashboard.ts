@@ -1,0 +1,93 @@
+import { defineDict } from './dictionary'
+
+export const dashboard = defineDict(
+  {
+    'd.stats.todayBookings': "Today's bookings",
+    'd.stats.pendingRequests': 'Pending requests',
+    'd.stats.expectedRevenue': 'Expected revenue',
+    'd.stats.nextUp': 'Next up',
+    'd.today.noUpcoming': 'No upcoming bookings',
+    'd.today.needsAction': 'Needs action',
+    'd.today.allCaughtUp': 'All caught up',
+    'd.today.schedule': "Today's schedule",
+    'd.today.closedToday': 'Closed today',
+    'd.today.noBookings': 'No bookings today',
+    'd.newBooking': 'New booking',
+
+    'd.action.accept': 'Accept',
+    'd.action.decline': 'Decline',
+    'd.action.reschedule': 'Reschedule',
+    'd.action.cancel': 'Cancel booking',
+    'd.action.markCompleted': 'Mark completed',
+    'd.action.markNoShow': 'Mark no-show',
+    'd.action.outcomeLocked': 'Available after start time',
+
+    'd.confirm.declineTitle': 'Decline this booking request?',
+    'd.confirm.declineBody':
+      "The customer is told the shop can't take this booking, and the time becomes available again.",
+    'd.confirm.cancelTitle': 'Cancel this booking?',
+    'd.confirm.cancelBody': 'The time becomes available again.',
+
+    'd.drawer.duration': 'Duration',
+    'd.drawer.source': 'Source',
+    'd.drawer.cancelledByCustomer': 'Cancelled by the customer',
+    'd.drawer.cancelledByOwner': 'Cancelled by the shop',
+
+    'd.dialog.newBooking': 'New booking',
+    'd.dialog.reschedule': 'Reschedule',
+    'd.dialog.times': 'Times',
+    'd.dialog.create': 'Create booking',
+    'd.dialog.noServices': 'No services are available right now',
+
+    'd.calendar.prevWeek': 'Previous week',
+    'd.calendar.nextWeek': 'Next week',
+    'd.calendar.today': 'Today',
+    'd.calendar.grid': 'Week schedule',
+    'd.calendar.newBookingAt': 'New booking {date} {time}',
+    'd.calendar.block': '{time} {name}, {status}',
+  },
+  {
+    'd.stats.todayBookings': 'การจองวันนี้',
+    'd.stats.pendingRequests': 'คำขอรอยืนยัน',
+    'd.stats.expectedRevenue': 'รายได้ที่คาดไว้',
+    'd.stats.nextUp': 'คิวถัดไป',
+    'd.today.noUpcoming': 'ยังไม่มีคิวถัดไป',
+    'd.today.needsAction': 'ต้องดำเนินการ',
+    'd.today.allCaughtUp': 'จัดการครบแล้ว',
+    'd.today.schedule': 'ตารางวันนี้',
+    'd.today.closedToday': 'วันนี้ปิด',
+    'd.today.noBookings': 'วันนี้ยังไม่มีการจอง',
+    'd.newBooking': 'เพิ่มการจอง',
+
+    'd.action.accept': 'ยืนยัน',
+    'd.action.decline': 'ปฏิเสธ',
+    'd.action.reschedule': 'เลื่อนเวลา',
+    'd.action.cancel': 'ยกเลิกการจอง',
+    'd.action.markCompleted': 'ทำเครื่องหมายเสร็จแล้ว',
+    'd.action.markNoShow': 'ทำเครื่องหมายไม่มาตามนัด',
+    'd.action.outcomeLocked': 'ใช้ได้หลังเวลาเริ่ม',
+
+    'd.confirm.declineTitle': 'ปฏิเสธคำขอนี้หรือไม่',
+    'd.confirm.declineBody': 'ลูกค้าจะเห็นว่าทางร้านไม่รับการจองนี้ และเวลานั้นจะกลับมาว่างอีกครั้ง',
+    'd.confirm.cancelTitle': 'ยกเลิกการจองนี้หรือไม่',
+    'd.confirm.cancelBody': 'เวลานั้นจะกลับมาว่างอีกครั้ง',
+
+    'd.drawer.duration': 'ระยะเวลา',
+    'd.drawer.source': 'ช่องทาง',
+    'd.drawer.cancelledByCustomer': 'ลูกค้ายกเลิกการจองนี้',
+    'd.drawer.cancelledByOwner': 'ทางร้านยกเลิกการจองนี้',
+
+    'd.dialog.newBooking': 'เพิ่มการจอง',
+    'd.dialog.reschedule': 'เลื่อนเวลา',
+    'd.dialog.times': 'เวลา',
+    'd.dialog.create': 'สร้างการจอง',
+    'd.dialog.noServices': 'ยังไม่มีบริการที่เปิดให้จองในขณะนี้',
+
+    'd.calendar.prevWeek': 'สัปดาห์ก่อนหน้า',
+    'd.calendar.nextWeek': 'สัปดาห์ถัดไป',
+    'd.calendar.today': 'วันนี้',
+    'd.calendar.grid': 'ตารางสัปดาห์',
+    'd.calendar.newBookingAt': 'เพิ่มการจอง {date} {time}',
+    'd.calendar.block': '{time} {name} {status}',
+  },
+)
