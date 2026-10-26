@@ -149,13 +149,13 @@
 
 ```mermaid
 flowchart TB
-  C[ลูกค้า · มือถือ]
-  O[เจ้าของร้าน · เดสก์ท็อป]
-  R["React 19 + HashRouter"]
-  P["pages/ customer + dashboard"]
-  S["AppStore — state + mutations"]
-  D["domain/ — slots, transitions, stats, seed"]
-  L[("localStorage bookingsaas.state.v1")]
+  C[ลูกค้า]
+  O[เจ้าของร้าน]
+  R["React + HashRouter"]
+  P["pages/"]
+  S["AppStore"]
+  D["domain/"]
+  L[("localStorage")]
 
   C --> R
   O --> R
